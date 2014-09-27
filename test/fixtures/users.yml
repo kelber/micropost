@@ -1,13 +1,13 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  name: MyString
-  email: MyString
-  location: MyString
+  name: Gustavo Video
+  email: gustavo.morales@gmail.com
+  location: Barranquila
   description: MyText
 
 two:
-  name: MyString
-  email: MyString
-  location: MyString
+  name: Kelber Stuchi
+  email: kelberstuchi@gmail.com
+  location: SaoPaulo
   description: MyText

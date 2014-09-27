@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
   before_action :get_users
-
+  before_filter :authenticate_member!, only: [:new, :create, :edit, :update, :destroy]
 
 
   # GET /posts

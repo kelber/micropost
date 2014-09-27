@@ -8,11 +8,8 @@ class User < ActiveRecord::Base
 
 	has_many :posts
 
-	validates :email, presence: true,
-					  uniqueless: true
-					  
-	validates :password, presence: true
+	
 
-	validates :name, presence: true
+	
 
 end

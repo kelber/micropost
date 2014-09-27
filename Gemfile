@@ -40,3 +40,5 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin]
 
 
 # gustavo morales
+
+gem 'foundation-rails'

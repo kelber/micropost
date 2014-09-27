@@ -15,9 +15,9 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
-    @users = User.all.map { |user| [user.name, user.id] }
-
-
+    @users = User.all.collect {|user| [user.name, user.id]}
+ #:person_id, Person.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
+    # era User.all.map
   end
 
   # GET /posts/1/edit

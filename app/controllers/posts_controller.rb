@@ -1,6 +1,10 @@
 class PostsController < ApplicationController
   before_action :set_post, only: [:show, :edit, :update, :destroy]
 
+  before_action :get_users
+
+
+
   # GET /posts
   # GET /posts.json
   def index
@@ -15,9 +19,8 @@ class PostsController < ApplicationController
   # GET /posts/new
   def new
     @post = Post.new
-    @users = User.all.collect {|user| [user.name, user.id]}
- #:person_id, Person.all.collect { |p| [ p.name, p.id ] }, include_blank: true %>
-    # era User.all.map
+  # criou metodo @users = User.all.map {|user| [user.name, user.id] }
+ 
   end
 
   # GET /posts/1/edit
@@ -65,6 +68,12 @@ class PostsController < ApplicationController
   end
 
   private
+
+  def get_users
+    @users = User.all.map {|user| [user.name, user.id] }
+  end
+
+
     # Use callbacks to share common setup or constraints between actions.
     def set_post
       @post = Post.find(params[:id])

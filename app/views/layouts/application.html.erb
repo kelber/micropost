@@ -34,9 +34,39 @@
   </nav>
 
   <div class="row">
+  <div class="columns large-12">
+
+  <% flash.each do |type, message| %>
+  <div data-alert class="alert-box success radius <%= flash_class type %>">
+      <%= message %>
+     <a href="#" class="close">&times;</a>
+  </div>
+  <% end %>
+
+
+
+<!-- 
+<% flash.each do |type,message| %>
+<div class="alert flash<%= type %>">
+  <%= message %>
+</div>
+<% end %> -->
+
+
+  
+
+
+
+
+
     <%= yield %>
+
+
+</div>
+</div>
+
     <%= javascript_include_tag "application" %>
 
-  </div>
+  
   </body>
 </html>
